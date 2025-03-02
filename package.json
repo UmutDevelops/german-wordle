@@ -1,0 +1,22 @@
+{
+    "name": "almanca-wordle",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "concurrently \"npm run dev:api\" \"npm run dev:frontend\"",
+      "dev:api": "cd api && npm run dev",
+      "dev:frontend": "cd frontend && npm run dev",
+      "build": "concurrently \"npm run build:api\" \"npm run build:frontend\"",
+      "build:api": "cd api && npm run build",
+      "build:frontend": "cd frontend && npm run build",
+      "start": "concurrently \"npm run start:api\" \"npm run start:frontend\"",
+      "start:api": "cd api && npm start",
+      "start:frontend": "cd frontend && npm start",
+      "install:all": "npm install && npm run install:api && npm run install:frontend",
+      "install:api": "cd api && npm install",
+      "install:frontend": "cd frontend && npm install"
+    },
+    "devDependencies": {
+      "concurrently": "^8.2.2"
+    }
+  }
